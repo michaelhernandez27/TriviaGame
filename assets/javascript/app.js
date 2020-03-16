@@ -21,9 +21,9 @@ function loadQuestion() {
     var choices = quizQuestions[currentQuestion].choices;
 
     $("#time").html("Timer: " + counter);
-    $("#game").html("
-    '<h4>' + question + '</h4>' + loadChoices(choices) + loadRemainingQuestion()"
-}
+    $("#game").html(
+    "<h4>"" + question + "</h4>" + loadChoices(choices) + loadRemainingQuestion()"
+)}
 
 function loadChoices(choices) {
     var result = "";
