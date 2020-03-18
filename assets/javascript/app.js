@@ -22,14 +22,14 @@ function loadQuestion() {
 
     $("#time").html("Timer: " + counter);
     $("#game").html(
-    "<h4>"" + question + "</h4>" + loadChoices(choices) + loadRemainingQuestion()"
+    "<h4>" + question + "</h4>" + loadChoices(choices) + loadRemainingQuestion()
 )}
 
 function loadChoices(choices) {
     var result = "";
 
     for (var i = 0; i < choices.length; i++) {
-        result += "<p class="choice" data-answer="${choices[i]}">${choices[i]}</p>";
+        result += '<p class="choice" data-answer="${choices[i]}">${choices[i]}</p>';
     }
 
     return result;
@@ -133,7 +133,7 @@ function preloadImage(status) {
         $("#game").html(
         <p class="preload-image">WRONG! The correct answer was <b>${correctAnswer}</b></p>
         <img src="${randomImage(loseGifs)}"/>
-        )
+        )    
     }
 }
 
@@ -143,42 +143,36 @@ function preloadImage(status) {
 //make questions
 var quizQuestions = [
     {
-        question:"?",
-        choices: ["1", "2", "3", "4"],
-        correctAnswer: "?",
+        question:"What high school did Kobe Bryant attend in Pennsylvania?",
+        choices: ["Roman Catholic", "Lower Merion", "Central Dauphin", "Hempfield"],
+        correctAnswer: "Lower Merion",
     },
     {
-        question:"?",
-        choices: ["1", "2", "3", "4"],
-        correctAnswer: "?",
+        question:"What year did Kobe Bryant get drafted?",
+        choices: ["1999", "1997", "1996", "1995"],
+        correctAnswer: "1996",
     },
     {
-        question:"?",
-        choices: ["1", "2", "3", "4"],
-        correctAnswer: "?",
+        question:"Which team drafted Kobe Bryant?",
+        choices: ["Charlotte Hornets", "Los Angeles Lakers", "Sacramento Kings", "Houston Rockets"],
+        correctAnswer: "Charlotte Hornets",
     },
     {
-        question:"?",
-        choices: ["1", "2", "3", "4"],
-        correctAnswer: "?",
+        question:"What two numbers did Kobe Bryant wear during his NBA career?",
+        choices: ["8 & 23", "24 & 27", "3 & 24", "8 & 24"],
+        correctAnswer: "8 & 24",
     },
     {
-        question:"?",
-        choices: ["1", "2", "3", "4"],
-        correctAnswer: "?",
+        question:"How many NBA championships did Kobe Bryant win?",
+        choices: ["3", "4", "5", "6"],
+        correctAnswer: "5",
     },
 ];
 
 var winGifs = [ 
-    "image",
-    "image",
-    "image",
-    "image",
+    <img src = "../TriviaGame/assets/images/winner.gif"></img>
 ];
 
 var loseGifs = [
-    "image",
-    "image",
-    "image",
-    "image",
+    <img src = "../TriviaGame/assets/images/loser.gif"></img>
 ];
